@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Wagging Tail</title>
+    <!-- tailwind and Daisyui -->
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=New+Amsterdam&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="">
+    <main class="w-11/12 mx-auto">
+      <header>
+        <nav>
+          <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                >
+                  <li><a>Home</a></li>
+                  <li><a>Shop</a></li>
+                  <li><a>Contact</a></li>
+                </ul>
+              </div>
+              <div class="flex items-center">
+                <img class="h-full w-full" src="/images/logo.webp" alt="" />
+                <a class="btn btn-ghost text-xl">The Wagging Tail</a>
+              </div>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1 gap-4">
+                <li><button class="btn">Home</button></li>
+                <li><button class="btn">Shop</button></li>
+                <li><button class="btn">Contact</button></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="btn">
+                <svg
+                  width="56"
+                  height="56"
+                  viewBox="0 0 56 56"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="56" height="56" rx="28" fill="white" />
+                  <rect
+                    x="0.5"
+                    y="0.5"
+                    width="55"
+                    height="55"
+                    rx="27.5"
+                    stroke="#0E7A81"
+                    stroke-opacity="0.2"
+                  />
+                  <g clip-path="url(#clip0_5_26)">
+                    <path
+                      d="M24 23C24 24.0609 24.4214 25.0783 25.1716 25.8284C25.9217 26.5786 26.9391 27 28 27C29.0609 27 30.0783 26.5786 30.8284 25.8284C31.5786 25.0783 32 24.0609 32 23C32 21.9391 31.5786 20.9217 30.8284 20.1716C30.0783 19.4214 29.0609 19 28 19C26.9391 19 25.9217 19.4214 25.1716 20.1716C24.4214 20.9217 24 21.9391 24 23Z"
+                      stroke="#131313"
+                      stroke-opacity="0.7"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M22 37V35C22 33.9391 22.4214 32.9217 23.1716 32.1716C23.9217 31.4214 24.9391 31 26 31H30C31.0609 31 32.0783 31.4214 32.8284 32.1716C33.5786 32.9217 34 33.9391 34 35V37"
+                      stroke="#131313"
+                      stroke-opacity="0.7"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_5_26">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="white"
+                        transform="translate(16 16)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- hero section -->
+      <section
+        class="gap-4 w-3/5 flex flex-col justify-center items-center mx-auto pt-3"
+      >
+        <h3 class="text-slate-400 text-center">
+          Bringing Families Together ❤️‍🔥
+        </h3>
+        <h1 class="text-5xl font-bold text-center">
+          Your Path to Adoption Starts Here
+        </h1>
+        <p class="text-sm text-slate-400 text-center">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a.
+        </p>
+        <button
+          class="btn btn-success h-12 w-24 bg-[#0E7A81] text-white text-center"
+        >
+          View more
+        </button>
+        <img src="/images/pet.webp" alt="" />
+      </section>
+      <!-- Middle div  -->
+      <div
+        class="gap-4 w-3/5 flex flex-col justify-center items-center mx-auto pt-8"
+      >
+        <h1 class="text-3xl font-bold text-center">Adopt Your Best Friend</h1>
+        <p class="text-sm text-slate-400 text-center">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a.
+        </p>
+      </div>
+
+      <!-- Api section -->
+      <div class="">
+        <!-- buttons -->
+        <div class="flex justify-between">
+          <!-- dog button -->
+          <button
+            id="dog-btn"
+            class="flex justify-center items-center text-2xl font-bold border rounded-3xl w-1/5"
+          >
+            <img src="/images/dog.png" alt="" />Dogs
+          </button>
+          <!-- cat button -->
+          <button
+            id="cat-btn"
+            class="flex justify-center items-center text-2xl font-bold border rounded-3xl w-1/5 gap-4"
+          >
+            <img class="h-24" src="/images/cat.png" alt="" />
+            Cats
+          </button>
+          <!-- rabbit button -->
+          <button
+            id="rabbit-btn"
+            class="flex justify-center items-center text-2xl font-bold border rounded-3xl w-1/5"
+          >
+            <img src="/images/rabbit.png" alt="" />Rabbit
+          </button>
+          <!-- Bird button -->
+          <button
+            id="bird-btn"
+            class="flex justify-center items-center text-2xl font-bold border rounded-3xl w-1/5"
+          >
+            <img src="/images/parrot.png" alt="" />Birds
+          </button>
+        </div>
+
+        <!-- mid div -->
+        <div class="flex justify-between mx-auto py-8">
+          <h3 class="text-slate-800 text-2xl font-bold ">Best Deal For you</h3>
+          <button class="btn bg-[#0E7A81] text-white text-center w-72">
+            Sort by Price
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="w-full bg-slate-900 flex flex-row justify-center items-center gap-48"
+    >
+      <!-- 1st Column: Branding & Contact -->
+      <div class="flex flex-col gap-4 max-w-sm">
+        <div class="flex items-center gap-2">
+          <img src="/images/logo.webp" alt="Logo" class="w-10 h-10" />
+          <a class="btn btn-ghost text-xl text-white normal-case"
+            >The Wagging Tail</a
+          >
+        </div>
+        <div class="flex flex-col gap-1 text-slate-300 text-sm">
+          <p>Location: av. Washington 165, NY CA 54003</p>
+          <p>Phone: +31 85 964 47 25</p>
+          <p>Email: info@yourdomain.com</p>
+          <p>Opening hours: 9.00 AM – 5.00 PM</p>
+        </div>
+        <div class="flex gap-3 pt-2">
+          <!-- Facebook -->
+          <svg
+            width="32"
+            height="32"
+            fill="none"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16 0C24.8365 0 32 7.163 32 16s-7.1635 16-16 16S0 24.837 0 16 7.1635 0 16 0Z"
+              fill="url(#fbGrad)"
+            />
+            <path
+              d="M18.08 31.87V19.51h3.48l.46-4.35H18.08v-2.18c0-1.13.11-1.74 1.74-1.74h2.18V6.89h-3.48c-4.18 0-5.65 2.11-5.65 5.66v2.61H10.25v4.35h2.61v12.18A16.02 16.02 0 0 0 16 32c.7 0 1.39-.04 2.08-.13Z"
+              fill="#fff"
+            />
+            <defs>
+              <linearGradient
+                id="fbGrad"
+                x1="16"
+                y1="0"
+                x2="16"
+                y2="32"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#00B2FF" />
+                <stop offset="1" stop-color="#006AFF" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <!-- GitHub -->
+          <svg
+            width="31"
+            height="28"
+            fill="none"
+            viewBox="0 0 31 28"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M24.393 0H29.143L18.767 11.861 30.974 28h-9.558l-7.486-9.788L5.364 28H.612L11.71 15.314 0 0h9.8l6.767 8.948L24.393 0ZM22.727 25.156h2.632L8.37 2.695H5.546l17.181 22.461Z"
+              fill="#fff"
+            />
+          </svg>
+
+          <!-- YouTube -->
+          <svg
+            width="47"
+            height="32"
+            fill="none"
+            viewBox="0 0 47 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M45.737 5A6 6 0 0 0 41.693.953C38.13 0 23.832 0 23.832 0S9.54 0 5.97.953A6 6 0 0 0 1.926 5C.973 8.56.973 16 .973 16s0 7.44.953 11.004A6 6 0 0 0 5.97 31.047C9.54 32 23.832 32 23.832 32s14.299 0 17.861-.953a6 6 0 0 0 4.044-5.043C46.69 23.44 46.69 16 46.69 16s0-7.44-.953-11Z"
+              fill="#FF0000"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- 2nd Column: Useful Links -->
+      <div class="flex flex-col gap-2">
+        <h2 class="text-white text-lg font-semibold">Useful Links</h2>
+        <p class="text-slate-300 text-sm">Home</p>
+        <p class="text-slate-300 text-sm">About Us</p>
+        <p class="text-slate-300 text-sm">Animals</p>
+        <p class="text-slate-300 text-sm">Foundation</p>
+        <p class="text-slate-300 text-sm">Contact</p>
+      </div>
+
+      <!-- 3rd Column: Drop a Message -->
+      <div class="flex flex-col gap-4 max-w-sm">
+        <h2 class="text-white text-lg font-semibold">Drop a Message</h2>
+        <label
+          class="input input-bordered bg-slate-600 flex items-center gap-2"
+        >
+          <svg
+            class="w-5 h-5 text-white"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            viewBox="0 0 24 24"
+          >
+            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+            <path d="M22 7 13.03 12.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <input
+            type="email"
+            class="bg-transparent text-white flex-1 placeholder:text-white"
+            placeholder="Enter Your Email"
+            required
+          />
+        </label>
+        <div class="text-xs text-slate-400 hidden validator-hint">
+          Enter Your Email
+        </div>
+        <button class="btn btn-success bg-[#0E7A81] w-full text-white">
+          Send
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>
