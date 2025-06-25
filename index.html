@@ -161,58 +161,23 @@
       </div>
 
       <!-- Api section -->
-      <div class="">
-        <!-- buttons -->
-        <div class="flex justify-between">
-          <!-- dog button -->
-          <button
-            id="dog-btn"
-            class="flex justify-center items-center text-2xl font-bold border rounded-3xl w-1/5"
-          >
-            <img src="/images/dog.png" alt="" />Dogs
-          </button>
-          <!-- cat button -->
-          <button
-            id="cat-btn"
-            class="flex justify-center items-center text-2xl font-bold border rounded-3xl w-1/5 gap-4"
-          >
-            <img class="h-24" src="/images/cat.png" alt="" />
-            Cats
-          </button>
-          <!-- rabbit button -->
-          <button
-            id="rabbit-btn"
-            class="flex justify-center items-center text-2xl font-bold border rounded-3xl w-1/5"
-          >
-            <img src="/images/rabbit.png" alt="" />Rabbit
-          </button>
-          <!-- Bird button -->
-          <button
-            id="bird-btn"
-            class="flex justify-center items-center text-2xl font-bold border rounded-3xl w-1/5"
-          >
-            <img src="/images/parrot.png" alt="" />Birds
-          </button>
-        </div>
+      <div id="btn-section" class="py-8"></div>
 
-        <!-- mid div -->
-        <div class="flex justify-between mx-auto py-8">
-          <h3 class="text-slate-800 text-2xl font-bold">Best Deal For you</h3>
-          <button class="btn bg-[#0E7A81] text-white text-center w-72">
-            Sort by Price
-          </button>
-        </div>
-      </div>
       <!-- Api play section -->
       <section class="flex gap-5">
-        <div id="card-container" class="w-3/4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-2">
-
-        </div>
-        <div class="w-1/4"></div>
+        <div
+          id="card-container"
+          class="w-3/4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-2"
+        ></div>
+        <!-- picture history div -->
+        <div
+          id="history-container"
+          class="w-1/4 border rounded-lg p-2 mb-2"
+        ></div>
       </section>
     </main>
     <footer
-      class="w-full bg-slate-900 flex flex-row justify-center items-center gap-48"
+      class="w-full bg-slate-900 flex flex-col justify-center items-center lg:flex lg:flex-row lg:justify-center lg:items-center gap-48"
     >
       <!-- 1st Column: Branding & Contact -->
       <div class="flex flex-col gap-4 max-w-sm">
@@ -337,7 +302,64 @@
         </button>
       </div>
     </footer>
+    <div id="popUp">
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+      <dialog id="video_details" class="modal">
+        <div class="modal-box">
+          <div id="details-container"></div>
 
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </div>
     <script src="/script/Functionalities.js"></script>
   </body>
 </html>
+<div class="hidden">
+  <!-- buttons -->
+  <div class="flex justify-between">
+    <!-- dog button -->
+    <button
+      id="dog-btn"
+      class="flex justify-center items-center text-2xl font-bold border rounded-3xl w-1/5"
+    >
+      <img src="/images/dog.png" alt="" />Dogs
+    </button>
+    <!-- cat button -->
+    <button
+      id="cat-btn"
+      class="flex justify-center items-center text-2xl font-bold border rounded-3xl w-1/5 gap-4"
+    >
+      <img class="h-24" src="/images/cat.png" alt="" />
+      Cats
+    </button>
+    <!-- rabbit button -->
+    <button
+      id="rabbit-btn"
+      class="flex justify-center items-center text-2xl font-bold border rounded-3xl w-1/5"
+    >
+      <img src="/images/rabbit.png" alt="" />Rabbit
+    </button>
+    <!-- Bird button -->
+    <button
+      id="bird-btn"
+      class="flex justify-center items-center text-2xl font-bold border rounded-3xl w-1/5"
+    >
+      <img src="/images/parrot.png" alt="" />Birds
+    </button>
+  </div>
+
+  <!-- mid div -->
+  <div class="flex justify-between mx-auto py-8">
+    <h3 class="text-slate-800 text-2xl font-bold">Best Deal For you</h3>
+    <button class="btn bg-[#0E7A81] text-white text-center w-72">
+      Sort by Price
+    </button>
+  </div>
+</div>
