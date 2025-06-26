@@ -16,37 +16,61 @@ const history = (pet) => {
   historyContainer.append(historyPicture);
 };
 
-const loadPetDetails = (videoId) => {
-  console.log(videoId);
-  const url = `https://openapi.programming-hero.com/api/phero-tube/video/${petId}`;
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => displaypetDetails(data.video));
+
+
+const loadPetDetails = async (petId) => {
+  const uri = `https://openapi.programming-hero.com/api/peddy/pet/${petId}`
+  const res = await fetch(uri)
+  const data = await res.json();
+  showDetails(data.petData)
 };
 
-const showDetails = (video) => {
-  console.log(video);
-  document.getElementById("popUp").showModal();
-  const detailsContainer = document.getElementById("details-container");
+const showDetails = async (petData) => {
+  const detailsContainer = document.getElementById("modal-content")
 
   detailsContainer.innerHTML = `
-   <div class="card bg-base-100 image-full shadow-sm">
-  <figure>
-    <img
-    class="w-full"
-      src="${video.thumbnail}"
-      alt="Shoes" />
-  </figure>
-  <div class="card-body">
-    <h2 class="card-title">${video.title}</h2>
-    <p class"text-slate-400">${video.description}</p>
-    <div class="card-actions justify-end">
-      
-    </div>
-  </div>
-</div>
-  `;
-};
+   <div class ="max-w-[668px] p-2 flex flex-col">
+   <img class="h-[320px] w-[636px]" src="${petData.image}">
+   <h2 class="text-2xl font-bold">${petData.pet_name}</h2>
+   <div class="grid grid-rows-3 grid-cols-2">
+               <div class="flex items-center gap-0.5">
+                  <img class="h-4 w-4" src="/images/breed.png" />
+                  <p class="text-slate-500 text-sm">Breed: ${petData.breed || "Unknown"}</p>
+                </div>
+                <div class="flex items-center gap-0.5">
+                   <img class="h-4 w-4" src="/images/birth.png" />
+                   <p class="text-slate-500 text-sm">Birth: ${petData.date_of_birth || "Not Provided"}</p>
+                 </div>
+                <div class="flex items-center  gap-0.5">
+                 <img class="h-4 w-4" src="/images/gender.png" />
+                 <p class="text-slate-500 text-sm">Gender: ${petData.gender ||"N/A"}</p>
+               </div>
+                <div class="flex items-center  gap-0.5">
+                <img class="h-4 w-4" src="/images/birth.png" />
+                 <p class="text-slate-500 text-sm">Vaccinated Status: ${petData.vaccinated_status || "Not Provided"}</p>
+                 </div>
+                <div>
+                <p class="text-sm text-gray-500">Price: ${petData.price ? `$${petData.price}` : "Contact for pricing"}</p>
+                </div>
+              </div>
+              </div>
+              <div class="divider"></div>
+              
+              <div class="flex flex-col gap-2">
+              <h2 class="text-xl font-bold"> Details Information</h2>
+              <p class="text-slate-400 text-sm">${petData.pet_details}</p>
+              </div>
+              
+           
+              </div>
+  `
+  //way 1
+
+  // document.getElementById("show-modal-data").click()
+
+  //way -2
+  document.getElementById("customModal").showModal();
+}
 
 function loadCards() {
   fetch("https://openapi.programming-hero.com/api/peddy/pets")
@@ -138,7 +162,7 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
                 <div class="flex  justify-center items-center">
                 <button onclick="history('${pet.image}')" id="picture-history" class="border btn btn-sm mr-2 w-1/4"><img src="/images/like.png" alt="Like" /></button>
                 <button class="p-2 btn btn-sm text-[#0E7A81] border rounded-lg  ">Adopt</button>
-                <button onclick="showDetails('${pet.petId}')" class="p-2 btn btn-sm text-[#0E7A81] border rounded-lg
+                <button onclick="loadPetDetails('${pet.petId}')" class="p-2 btn btn-sm text-[#0E7A81] border rounded-lg
                 ]">Details</button>
               </div>
               </div>

@@ -141,7 +141,7 @@
           readable content of a page when looking at its layout. The point of
           using Lorem Ipsum is that it has a.
         </p>
-        <button
+        <button onclick="location.href='#btn-section'"
           class="btn btn-success h-12 w-24 bg-[#0E7A81] text-white text-center"
         >
           View more
@@ -302,22 +302,21 @@
         </button>
       </div>
     </footer>
-    <div id="popUp">
-      <!-- Open the modal using ID.showModal() method -->
-      <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
-      <dialog id="video_details" class="modal">
-        <div class="modal-box">
-          <div id="details-container"></div>
 
-          <div class="modal-action">
-            <form method="dialog">
-              <!-- if there is a button in form, it will close the modal -->
-              <button class="btn">Close</button>
-            </form>
-          </div>
+    <!-- Open the modal using ID.showModal() method -->
+    <button id="show-modal-data"  class="hidden btn" onclick="customModal.showModal()">open modal</button>
+    <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+       <div id="modal-content"></div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+              <button class="btn w-full p-2 bg-green-900 text-white">Cancel</button>
+          </form>
         </div>
-      </dialog>
-    </div>
+      </div>
+    </dialog>
+
     <script src="/script/Functionalities.js"></script>
   </body>
 </html>
