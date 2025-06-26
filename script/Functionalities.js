@@ -34,19 +34,19 @@ const showDetails = async (petData) => {
    <h2 class="text-2xl font-bold">${petData.pet_name}</h2>
    <div class="grid grid-rows-3 grid-cols-2">
                <div class="flex items-center gap-0.5">
-                  <img class="h-4 w-4" src="/images/breed.png" />
+                  <img class="h-4 w-4" src="./images/breed.png" />
                   <p class="text-slate-500 text-sm">Breed: ${petData.breed || "Unknown"}</p>
                 </div>
                 <div class="flex items-center gap-0.5">
-                   <img class="h-4 w-4" src="/images/birth.png" />
+                   <img class="h-4 w-4" src="./images/birth.png" />
                    <p class="text-slate-500 text-sm">Birth: ${petData.date_of_birth || "Not Provided"}</p>
                  </div>
                 <div class="flex items-center  gap-0.5">
-                 <img class="h-4 w-4" src="/images/gender.png" />
+                 <img class="h-4 w-4" src="./images/gender.png" />
                  <p class="text-slate-500 text-sm">Gender: ${petData.gender ||"N/A"}</p>
                </div>
                 <div class="flex items-center  gap-0.5">
-                <img class="h-4 w-4" src="/images/birth.png" />
+                <img class="h-4 w-4" src="./images/birth.png" />
                  <p class="text-slate-500 text-sm">Vaccinated Status: ${petData.vaccinated_status || "Not Provided"}</p>
                  </div>
                 <div>
@@ -125,7 +125,7 @@ const displayCards = (pets) => {
     <div
         class="py-20 col-span-full flex flex-col justify-center items-center text-center border rounded-lg bg-slate-400"
       >
-        <img class="w-[120px]" src="/images/error.webp" alt="" />
+        <img class="w-[120px]" src="./images/error.webp" alt="" />
         <h2 class="text-2xl font-bold">
           Oops!! Sorry, There is no content here
         </h2>
@@ -146,21 +146,21 @@ its layout. The point of using Lorem Ipsum is that it has a.</p>
                  <img class="h-auto w-auto rounded-lg" src="${pet.image}" />
                     <h3 class="text-black text-lg font-bold">${pet.pet_name}</h3>
                 <div class="flex items-center gap-0.5">
-                  <img class="h-4 w-4" src="/images/breed.png" />
+                  <img class="h-4 w-4" src="./images/breed.png" />
                   <p class="text-slate-500 text-sm">Breed: ${pet.breed || "Unknown"}</p>
                 </div>
                 <div class="flex items-center gap-0.5">
-                   <img class="h-4 w-4" src="/images/birth.png" />
+                   <img class="h-4 w-4" src="./images/birth.png" />
                    <p class="text-slate-500 text-sm">Birth: ${pet.date_of_birth || "Not Provided"}</p>
                  </div>
                 <div class="flex items-center  gap-0.5">
-                 <img class="h-4 w-4" src="/images/gender.png" />
+                 <img class="h-4 w-4" src="./images/gender.png" />
                  <p class="text-slate-500 text-sm">Gender: ${pet.gender ||"N/A"}</p>
                </div>
                 <p class="text-sm text-gray-500">Price: ${pet.price ? `$${pet.price}` : "Contact for pricing"}</p>
                 <div class="divider my-2"></div>
                 <div class="flex  justify-center items-center">
-                <button onclick="history('${pet.image}')" id="picture-history" class="border btn btn-sm mr-2 w-1/4"><img src="/images/like.png" alt="Like" /></button>
+                <button onclick="history('${pet.image}')" id="picture-history" class="border btn btn-sm mr-2 w-1/4"><img src="./images/like.png" alt="Like" /></button>
                 <button class="p-2 btn btn-sm text-[#0E7A81] border rounded-lg  ">Adopt</button>
                 <button onclick="loadPetDetails('${pet.petId}')" class="p-2 btn btn-sm text-[#0E7A81] border rounded-lg
                 ]">Details</button>
@@ -194,21 +194,21 @@ loadCards();
 //         <img class="h-[272px] w-[160px]" src="${pet.image}" />
 //            <h3 class="text-black text-lg font-bold">${pet.pet_name}</h3>
 //        <div class="flex">
-//          <img class="h-4 w-4" src="/images/breed.png" />
+//          <img class="h-4 w-4" src="./images/breed.png" />
 //          <p class="text-slate-500 text-sm">Breed: ${pet.breed || "Unknown"}</p>
 //        </div>
 //        <div class="flex">
-//           <img class="h-4 w-4" src="/images/birth.png" />
+//           <img class="h-4 w-4" src="./images/birth.png" />
 //           <p class="text-slate-500 text-sm">Birth: ${pet.date_of_birth || "Not Provided"}</p>
 //         </d
 //        <div class="flex">
-//         <img class="h-4 w-4" src="/images/gender.png" />
+//         <img class="h-4 w-4" src="./images/gender.png" />
 //         <p class="text-slate-500 text-sm">Gender: ${pet.gender ||"N/A"}</p>
 //       </div>
 //        <p class="text-sm text-gray-500">Price: ${pet.price ? `$${pet.price}` : "Contact for pricing"}<
 //        <div class="divider my-2"></div>
 //        <div class="flex gap-3 ">
-//        <button class="btn btn-sm mr-2"><img src="/images/like.png" alt="Like" /></button>
+//        <button class="btn btn-sm mr-2"><img src="./images/like.png" alt="Like" /></button>
 //        <button class="btn btn-sm">Adopt</button>
 //        <button class="btn btn-sm">Details</button>
 //      </div>
@@ -271,23 +271,23 @@ loadCards();
 // // // // // //          <img class="h-[272px] w-[160px]" src="${pet.image}" />
 // // // // // //             <h3 class="text-black text-lg font-bold">${pet.pet_name}</h3>
 // // // // // //         <div class="flex">
-// // // // // //           <img class="h-4 w-4" src="/images/breed.png" />
+// // // // // //           <img class="h-4 w-4" src="./images/breed.png" />
 // // // // // //           <p class="text-slate-500 text-sm">Breed: ${pet.breed || "Unknown"}</p>
 // // // // // //         </div>
 // // // // // //         <div class="flex">
-// // // // // //            <img class="h-4 w-4" src="/images/birth.png" />
+// // // // // //            <img class="h-4 w-4" src="./images/birth.png" />
 // // // // // //            <p class="text-slate-500 text-sm">Birth: ${pet.date_of_birth || "Not Provided"}</p>
 // // // // // //          </div>
 
 // // // // // //         <div class="flex">
-// // // // // //          <img class="h-4 w-4" src="/images/gender.png" />
+// // // // // //          <img class="h-4 w-4" src="./images/gender.png" />
 // // // // // //          <p class="text-slate-500 text-sm">Gender: ${pet.gender ||"N/A"}</p>
 // // // // // //        </div>
 // // // // // //         <p class="text-sm text-gray-500">Price: ${pet.price ? `$${pet.price}` : "Contact for pricing"}</p>
 
 // // // // // //         <div class="divider my-2"></div>
 // // // // // //         <div class="flex gap-3 ">
-// // // // // //         <button class="btn btn-sm mr-2"><img src="/images/like.png" alt="Like" /></button>
+// // // // // //         <button class="btn btn-sm mr-2"><img src="./images/like.png" alt="Like" /></button>
 // // // // // //         <button class="btn btn-sm">Adopt</button>
 // // // // // //         <button class="btn btn-sm">Details</button>
 // // // // // //       </div>
@@ -317,23 +317,23 @@ loadCards();
 // // //         <img class="h-[272px] w-[160px]" src="${pet.image}" />
 // // //         <h3 class="text-black text-lg font-bold">${pet.pet_name}</h3>
 // // //         <div>
-// // //           <img src="/images/breed.png" />
+// // //           <img src="./images/breed.png" />
 // // //           <p class="text-slate-300 text-sm">Breed: ${pet.breed || "Unknown"}</p>
 // // //         </div>
 // // //         <div>
-// // //           <img src="/images/birth.png" />
+// // //           <img src="./images/birth.png" />
 // // //           <p class="text-slate-300 text-sm">Birth: ${pet.date_of_birth || "Not Provided"}</p>
 // // //         </div>
 // // //         <div>
-// // //           <img src="/images/gender.png" />
+// // //           <img src="./images/gender.png" />
 // // //           <p class="text-slate-300 text-sm">Gender: ${pet.gender ||"N/A"}</p>
 // // //         </div>
 // // //         <div>
-// // //           <img src="/images/price.png" />
+// // //           <img src="./images/price.png" />
 // // //           <p class="text-slate-300 text-sm">Price: ${pet.price ? `${pet.price}`}</p>
 // // //         </div>
 // // //         <div class="divider"></div>
-// // //         <button class="btn h-[38px] w-[56px]"><img src="/images/like.png" /></button>
+// // //         <button class="btn h-[38px] w-[56px]"><img src="./images/like.png" /></button>
 // // //         <button class="btn h-[38px] w-[92px]">Adopt</button>
 // // //         <button class="btn h-[38px] w-[92px]">Details</button>
 // // //       </div> `
