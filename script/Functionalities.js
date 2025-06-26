@@ -84,6 +84,7 @@ const loadCategoryCard = (category) => {
     .then(res => res.json())
     .then(data => displayCards(data.data))
     .catch(error => console.log(error))
+    
 }
 
 function displayCategories(categories) {
@@ -101,6 +102,7 @@ function displayCategories(categories) {
     categoryDiv.className = "py-5"
 
     categoryDiv.innerHTML = `
+    
       <button onclick="loadCategoryCard('${cat.category}')"  type="button"  class="flex justify-center items-center gap-2 text-xl font-semibold border border-gray-300 rounded-3xl px-5 py-2 hover:bg-[#0E7A81] hover:text-white transition">
       <img class="h-6 w-6 object-contain" src="${cat.category_icon}" alt="${cat.category} icon" />
       <span>${cat.category}</span>
