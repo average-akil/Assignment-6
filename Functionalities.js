@@ -80,13 +80,27 @@ function loadCards() {
 }
 
 const loadCategoryCard = (category) => {
+  animation();
+
   fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`)
     .then(res => res.json())
-    .then(data => displayCards(data.data))
-    .catch(error => console.log(error))
-    
-}
+    .then(data => {
+      setTimeout(() => {
+        displayCards(data.data); 
+      }, 2000);
+    })
+    .catch(error => console.log(error));
+};
 
+const animation = () => {
+  const ani = document.getElementById("card-container");
+  ani.innerHTML = `
+  <div class=" py-20 col-span-full flex flex-col justify-center items-center  border rounded-lg "
+      ">
+  <span class=" loading loading-bars loading-xl "></span>
+  </div>
+  `;
+};
 function displayCategories(categories) {
   // get the container
   const categoryContainer = document.getElementById("btn-section");
@@ -121,8 +135,10 @@ const displayCards = (pets) => {
   cardContainer.innerHTML = ""; // Clear previous ca
 
   const petCard = document.createElement("div");
-
+ 
   if (pets.length == 0) {
+
+    cardContainer.innerHTML = ""
     cardContainer.innerHTML = `
     <div
         class="py-20 col-span-full flex flex-col justify-center items-center text-center border rounded-lg bg-slate-400"
@@ -179,6 +195,8 @@ loadCategories();
 loadCards();
 
 
+// Wait 2 seconds then display the actual categories
+// 2 seconds delay
 // const loadCards = (categories) => {
 //         fetch('https://openapi.programming-hero.com/api/peddy/pets')
 //            .then(res => res.json())
