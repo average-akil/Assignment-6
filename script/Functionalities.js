@@ -8,7 +8,7 @@ function loadCategories() {
 const history = (pet) => {
   const historyContainer = document.getElementById("history-container");
   const historyPicture = document.createElement("div");
-  historyContainer.className = "w-1/4 grid grid-cols-1 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2  gap-2 max-h-96 overflow-y-auto border rounded-lg p-2 mb-2";
+  historyContainer.className = "sm:w-full md:w-1/4 lg:w-1/4 grid grid-cols-2 sm:justify-center sm:items-center   md:grid md:grid-cols-2 lg:grid lg:grid-cols-2  gap-2 max-h-96 overflow-y-auto border rounded-lg p-2 mb-2 ";
   historyPicture.innerHTML = `
     <img class="h-auto w-full rounded-lg" src="${pet}" alt="Pet History Image" />
   `;
